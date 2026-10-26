@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+< lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Desenvolvimento Web | Do Zero à Prática</title>
+
+    <!-- Conecta o HTML ao arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<>
+
+    <!-- Cabeçalho do site -->
+    <header class="cabecalho">
+
+    <a href="#inicio" class="logo">
+        Dev<span>Web</span>
+    </a>
+
+    <!-- Botão para abrir e fechar o menu -->
+    <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+        type="button">
+        ☰
+    </button>
+
+    <!-- Menu de navegação -->
+    <nav class="menu" id="menu-principal">
+            <a href="#inicio">Início</a>
+            <a href="#fundamentos">Fundamentos</a>
+            <a href="#tecnologias">Tecnologias</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+
+        <!-- Apresentação -->
+        <section class="hero" id="inicio">
+            <p class="etiqueta">PROJETO ACADÊMICO</p>
+
+            <h1>
+                Descubra o universo do
+                <span>Desenvolvimento Web</span>
+            </h1>
+
+            <p class="descricao">
+                Aprenda como os sites funcionam,
+                conheça as principais tecnologias
+                e descubra como criar suas próprias
+                páginas para a internet.
+            </p>
+
+            <a href="#fundamentos" class="botao">
+                Começar a aprender →
+            </a>
+        </section>
+
+        <!-- Fundamentos -->
+        <section class="conteudo" id="fundamentos">
+            <p class="etiqueta">PRIMEIROS PASSOS</p>
+
+            <h2>O que é desenvolvimento web?</h2>
+
+            <p class="texto">
+                É o processo de criação e manutenção
+                de sites e aplicações web. Ele combina
+                estrutura, design, programação e
+                resolução de problemas para oferecer
+                experiências úteis aos usuários.
+            </p>
+        </section>
+
+        <!-- Tecnologias -->
+        <section class="conteudo" id="tecnologias">
+            <p class="etiqueta">TECNOLOGIAS PRINCIPAIS</p>
+
+            <h2>Os três pilares da web</h2>
+
+            
+<div class="cartoes">
+
+    <article class="cartao">
+        <h3>HTML</h3>
+        <p>
+            Cria a estrutura e organiza
+            os conteúdos da página.
+        </p>
+
+        <button class="botao-aula"
+                type="button"
+                aria-expanded="false">
+            Ver aula
+        </button>
+
+        
+<div class="conteudo-aula" hidden>
+    <h4>Aula 1: Introdução ao HTML</h4>
+
+    <p>
+        HTML significa HyperText Markup Language,
+        ou Linguagem de Marcação de Hipertexto.
+        Ele é utilizado para estruturar o conteúdo
+        de páginas na internet.
+    </p>
+
+    <h4>Conhecendo as tags</h4>
+
+    <p>
+        As tags indicam ao navegador como cada
+        elemento deve ser interpretado.
+    </p>
+
+    <ul>
+        <li><code>&lt;h1&gt;</code> cria um título principal.</li>
+        <li><code>&lt;p&gt;</code> cria um parágrafo.</li>
+        <li><code>&lt;a&gt;</code> cria um link.</li>
+    </ul>
+
+    <h4>Exemplo prático</h4>
+
+    <pre><code>&lt;h1&gt;Meu primeiro site&lt;/h1&gt;
+&lt;p&gt; To aprendendo HTML!&lt;/p&gt;</code></pre>
+
+    <p>
+        Nesse exemplo, criamos um título e um
+        parágrafo para aparecerem na página.
+    </p>
+
+    <h4>Desafio do aluno</h4>
+
+    <p>
+        Qual tag utilizamos para criar um parágrafo?
+    </p>
+
+    <p><strong>Resposta:</strong> a tag
+        <code>&lt;p&gt;</code>.
+    </p>
+</div>
+<div class="exercicio-html">
+
+    <h4>Teste seus conhecimentos</h4>
+
+    <p>
+        <strong>Pergunta:</strong>
+        Qual tag HTML usamos para criar um título principal?
+    </p>
+
+    <label>
+        <input type="radio" name="resposta-html" value="p">
+        A) &lt;p&gt;
+    </label>
+
+    <label>
+        <input type="radio" name="resposta-html" value="h1">
+        B) &lt;h1&gt;
+    </label>
+
+    <label>
+        <input type="radio" name="resposta-html" value="img">
+        C) &lt;img&gt;
+    </label>
+
+    <button type="button" id="corrigir-html">
+        Conferir resposta
+    </button>
+
+    <p id="resultado-html" aria-live="polite"></p>
+
+</div>
+    </article>
+
+    <article class="cartao">
+        <h3>CSS</h3>
+        <p>
+            Define cores, fontes,
+            espaçamentos e o visual.
+        </p>
+
+        <button class="botao-aula"
+                type="button"
+                aria-expanded="false">
+            Ver aula
+        </button>
+
+        <div class="conteudo-aula" hidden>
+            
+<h4>Aula 2: Introdução ao CSS</h4>
+
+<p>
+    CSS significa Cascading Style Sheets,
+    ou Folhas de Estilo em Cascata.
+    Ele é utilizado para definir a aparência
+    dos elementos de uma página web.
+</p>
+
+<h4>O que podemos fazer com CSS?</h4>
+
+<ul>
+    <li>Mudar a cor dos textos.</li>
+    <li>Alterar o tamanho das letras.</li>
+    <li>Adicionar cores de fundo.</li>
+    <li>Organizar o posicionamento dos elementos.</li>
+</ul>
+
+<h4>Conhecendo uma regra CSS</h4>
+
+<pre><code>h1 {
+    color: blue;
+    font-size: 32px;
+}</code></pre>
+
+<p>
+    Nesse exemplo, todos os títulos h1
+    selecionados por essa regra terão texto
+    azul e tamanho de fonte de 32 pixels,
+    desde que nenhuma outra regra aplicável
+    tenha prioridade maior.
+</p>
+
+<h4>Entendendo as propriedades</h4>
+
+<ul>
+    <li><code>color</code>: define a cor do texto.</li>
+    <li><code>font-size</code>: define o tamanho da fonte.</li>
+    <li><code>background-color</code>: define a cor de fundo.</li>
+    <li><code>text-align</code>: controla o alinhamento do texto.</li>
+</ul>
+
+<h4>Desafio do aluno</h4>
+
+<p>
+    Imagine que você queira deixar um título
+    vermelho. Qual propriedade CSS deve utilizar?
+</p>
+
+        </div>
+<div class="exercicio-css">
+
+    <h4>Teste seus conhecimentos</h4>
+
+    <p>
+        <strong>Pergunta:</strong>
+        Qual linguagem utilizamos para definir as cores,
+        as fontes e o espaçamento de uma página web?
+    </p>
+
+    <label>
+        <input type="radio" name="resposta-css" value="html">
+        A) HTML
+    </label>
+
+    <label>
+        <input type="radio" name="resposta-css" value="css">
+        B) CSS
+    </label>
+
+    <label>
+        <input type="radio" name="resposta-css" value="javascript">
+        C) JavaScript
+    </label>
+
+    <button type="button" id="corrigir-css">
+        Conferir resposta
+    </button>
+
+    <p id="resultado-css" aria-live="polite"></p>
+
+</div>
+    </article>
+
+    <article class="cartao">
+        <h3>JavaScript</h3>
+        <p>
+            Adiciona comportamentos
+            e interações à página.
+        </p>
+
+        <button class="botao-aula"
+                type="button"
+                aria-expanded="false">
+            Ver aula
+        </button>
+
+        <div class="conteudo-aula" hidden>
+            
+<h4>Aula 3: Introdução ao JavaScript</h4>
+
+<p>
+    JavaScript é uma linguagem de programação
+    utilizada para adicionar interatividade
+    e comportamento às páginas web.
+</p>
+
+<h4>O que podemos fazer com JavaScript?</h4>
+
+<ul>
+    <li>Responder aos cliques em botões.</li>
+    <li>Mostrar e esconder conteúdos.</li>
+    <li>Verificar informações digitadas em formulários.</li>
+    <li>Atualizar textos na página.</li>
+</ul>
+
+<h4>Conhecendo uma variável</h4>
+
+<pre><code>let nome = "Maria";
+
+console.log(nome);</code></pre>
+
+<p>
+    Nesse exemplo, criamos uma variável chamada
+    nome e armazenamos nela o texto "Maria".
+    O comando console.log() permite visualizar
+    esse valor no console do navegador.
+</p>
+
+<h4>Fazendo uma ação acontecer</h4>
+
+<pre><code>const botao
+  = document.querySelector
+  ("#meu-botao");
+
+botao.addEventListener
+  ("click", function() {
+    alert("Você clicou
+  no botão!");
+});</code></pre>
+
+<p>
+    Esse exemplo localiza um botão com o ID
+    meu-botao e mostra uma mensagem quando
+    alguém clica nele.
+</p>
+
+<h4>Entendendo os comandos</h4>
+
+<ul>
+    <li><code>let</code>: declara uma variável cujo valor pode ser alterado.</li>
+    <li><code>const</code>: declara uma variável que não pode ser reatribuída.</li>
+    <li><code>document.querySelector()</code>: localiza um elemento na página.</li>
+    <li><code>addEventListener()</code>: registra uma ação para um evento.</li>
+    <li><code>alert()</code>: exibe uma caixa de mensagem.</li>
+</ul>
+
+<h4>Desafio do aluno</h4>
+
+<p>
+    Qual comando permite executar uma ação
+    quando o usuário clica em um botão?
+</p>
+
+        </div>
+      
+<div class="exercicio-javascript">
+
+    <h4>Teste seus conhecimentos</h4>
+
+    <p>
+        <strong>Pergunta:</strong>
+        Qual é a principal função do JavaScript
+        no desenvolvimento web?
+    </p>
+
+    <label>
+        <input type="radio" name="resposta-javascript" value="estrutura">
+        A) Criar a estrutura do conteúdo da página.
+    </label>
+
+    <label>
+        <input type="radio" name="resposta-javascript" value="aparencia">
+        B) Definir as cores e o visual da página.
+    </label>
+
+    <label>
+        <input type="radio" name="resposta-javascript" value="interatividade">
+        C) Adicionar comportamentos e interatividade.
+    </label>
+
+    <button type="button" id="corrigir-javascript">
+        Conferir resposta
+    </button>
+
+    <p id="resultado-javascript" aria-live="polite"></p>
+
+</div>
+
+    </article>
+
+</div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    < class="rodape">
+        <p>
+            Projeto acadêmico de Desenvolvimento Web
+        </p>
+        </footer>
+
+    <!-- Conecta o HTML ao arquivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

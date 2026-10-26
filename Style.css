@@ -1,0 +1,628 @@
+
+/* 1. Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+/* 2. Cabeçalho */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #111a2e;
+    border-bottom: 1px solid #24324b;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #38bdf8;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: #38bdf8;
+}
+
+/* 3. Apresentação */
+
+.hero {
+    text-align: center;
+    padding: 90px 8% 100px;
+    background:
+        radial-gradient(
+            circle at top,
+            #19345a,
+            #0b1120 70%
+        );
+}
+
+.etiqueta {
+    color: #38bdf8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 54px);
+    line-height: 1.2;
+    max-width: 850px;
+    margin: 0 auto 22px;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.descricao {
+    color: #b6c3d6;
+    max-width: 620px;
+    margin: 0 auto 30px;
+}
+
+/* 4. Botão principal */
+
+.botao {
+    display: inline-block;
+    background-color: #0284c7;
+    color: white;
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.botao:hover {
+    background-color: #0369a1;
+}
+
+/* 5. Seções de conteúdo */
+
+.conteudo {
+    max-width: 1100px;
+    margin: auto;
+    padding: 65px 8%;
+}
+
+.conteudo h2 {
+    color: #111a2e;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.texto {
+    color: #111a2e;
+}
+
+/* 6. Cartões das tecnologias */
+
+.cartoes {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 28px;
+}
+
+.cartao {
+    background-color: #111a2e;
+    border: 1px solid #273750;
+    border-radius: 12px;
+    padding: 25px;
+    transition: transform 0.2s,
+                border-color 0.2s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.cartao h3 {
+    color: #38bdf8;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.cartao p {
+    color: #b6c3d6;
+    font-size: 14px;
+}
+
+/* 7. Rodapé */
+
+.rodape {
+    text-align: center;
+    padding: 25px 8%;
+    border-top: 1px solid #24324b;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* 8. Ajustes para celulares */
+
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 5%;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+    }
+
+    .conteudo {
+        padding: 45px 6%;
+    }
+
+    .conteudo h2 {
+        font-size: 24px;
+    }
+}
+/* Indica que os cartões são interativos */
+.cartao {
+    cursor: pointer;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+/* Destaque aplicado ao cartão selecionado */
+.cartao-selecionado {
+    transform: translateY(-5px);
+    border: 2px solid #38bdf8;
+}
+/* Botão do menu */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 8px;
+}
+
+/* Menu em telas pequenas */
+@media (max-width: 600px) {
+
+    .cabecalho {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+      
+/* Blocos de exemplos de código */
+.conteudo-aula pre {
+    margin: 12px 0;
+    padding: 12px;
+    background-color: #182433;
+    color: #a9f5c5;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* Evita margens duplicadas no código do exemplo */
+.conteudo-aula pre code {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: inherit;
+    overflow-wrap: anywhere;
+}
+  align-items: center;
+        gap: 16px;
+        width: 100%;
+        padding: 16px 0;
+    }
+
+    .menu.menu-aberto {
+        display: flex;
+    }
+}
+
+/* Botões das aulas */
+.botao-aula {
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #111a2e;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.botao-aula:hover {
+    background: #1d4ed8;
+}
+
+/* Conteúdo revelado pelo botão */
+.conteudo-aula {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #94a3b8;
+}
+
+/* Respeita o atributo hidden */
+.conteudo-aula[hidden] {
+    display: none;
+}
+
+.conteudo-aula h4 {
+    margin-bottom: 8px;
+}
+
+.conteudo-aula code {
+    display: block;
+    overflow-wrap: anywhere;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 6px;
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+/* Área de conteúdo das aulas */
+.conteudo-aula {
+    margin-top: 18px;
+    padding: 18px;
+    background-color: #f0f7ff;
+    border-left: 4px solid #2878d0;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* Título de cada aula */
+.conteudo-aula h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #174a80;
+    font-size: 1.2rem;
+}
+
+/* Parágrafos dentro das aulas */
+.conteudo-aula p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* Exemplos de código */
+.conteudo-aula code {
+    display: block;
+    padding: 12px;
+    margin: 12px 0;
+    background-color: #182433;
+    color: #a9f5c5;
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+    font-size: 0.95rem;
+}
+
+/* Botão para abrir e fechar a aula */
+.botao-aula {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2878d0;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efeito visual ao pressionar o botão */
+.botao-aula:active {
+    opacity: 0.8;
+}
+
+/* Área do exercício de HTML */
+.exercicio-html {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    background-color: #f8fafc;
+}
+
+/* Título do exercício */
+.exercicio-html h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #1e3a5f;
+    font-size: 1.1rem;
+}
+
+/* Pergunta */
+.exercicio-html > p:first-of-type {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  color: #111a2e
+}
+
+/* Alternativas */
+.exercicio-html label {
+    display: block;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid #dbe3ef;
+    border-radius: 8px;
+    background-color: #111a2e;
+    cursor: pointer;
+}
+
+/* Espaço entre o botão de opção e o texto */
+.exercicio-html input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #2563eb;
+}
+
+/* Botão de correção */
+.exercicio-html button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efeito visual ao pressionar o botão */
+.exercicio-html button:active {
+    opacity: 0.8;
+}
+
+/* Espaço e leitura da mensagem */
+#resultado-html {
+    padding: 12px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+/* Aviso para quem não selecionou resposta */
+#resultado-html.resposta-aviso {
+    background-color: #fff7ed;
+    color: #9a3412;
+    border: 1px solid #fed7aa;
+}
+
+/* Resposta correta */
+#resultado-html.resposta-correta {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+/* Resposta incorreta */
+#resultado-html.resposta-incorreta {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* Aparência do exercício de CSS */
+.exercicio-css {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    background-color: #f8fafc;
+}
+
+.exercicio-css h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #1e3a5f;
+    font-size: 1.1rem;
+}
+
+.exercicio-css > p:first-of-type {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  color: #111a2e
+}
+
+.exercicio-css label {
+    display: block;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid #dbe3ef;
+    border-radius: 8px;
+    background-color: #111a2e;
+    cursor: pointer;
+}
+
+.exercicio-css input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #2563eb;
+}
+
+.exercicio-css button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.exercicio-css button:active {
+    opacity: 0.8;
+}
+resultado-css {
+    padding: 12px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+/* Aviso para quem não selecionou resposta */
+#resultado-css.resposta-aviso {
+    background-color: #fff7ed;
+    color: #9a3412;
+    border: 1px solid #fed7aa;
+}
+
+/* Resposta correta */
+#resultado-css.resposta-correta {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+/* Resposta incorreta */
+#resultado-css.resposta-incorreta {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+  
+/* Aparência do exercício de JavaScript */
+.exercicio-javascript {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    background-color: #f8fafc;
+}
+
+.exercicio-javascript h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #1e3a5f;
+    font-size: 1.1rem;
+}
+
+.exercicio-javascript > p:first-of-type {
+    line-height: 1.6;
+    margin-bottom: 16px;
+  color: #111a2e
+}
+
+.exercicio-javascript label {
+    display: block;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: 1px solid #dbe3ef;
+    border-radius: 8px;
+    background-color: #111a2e;
+    cursor: pointer;
+}
+
+.exercicio-javascript input[type="radio"] {
+    margin-right: 8px;
+    accent-color: #2563eb;
+}
+
+.exercicio-javascript button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.exercicio-javascript button:active {
+    opacity: 0.8;
+}
+/* Aviso para quem não selecionou resposta */
+#resultado-javascript.resposta-aviso {
+    background-color: #fff7ed;
+    color: #9a3412;
+    border: 1px solid #fed7aa;
+}
+
+/* Resposta correta */
+#resultado-javascript.resposta-correta {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+/* Resposta incorreta */
+#resultado-javascript.resposta-incorreta {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+
+/* Melhorar a leitura dos textos das aulas */
+.conteudo-aula p,
+.conteudo-aula li {
+    color: #334155;
+    line-height: 1.8;
+}
+
+/* Manter os títulos das aulas bem destacados */
+.conteudo-aula h4 {
+    color: #174a7e;
+}
+
+/* Melhorar a leitura dos textos explicativos */
+.conteudo-aula {
+    color: #334155;
+}
